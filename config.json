@@ -1,0 +1,31 @@
+{
+  "data_dir": "data/raw",
+  "output_dir": "output",
+  "pdf_parser": {
+    "extract_text": true,
+    "extract_tables": false,
+    "extract_images": false,
+    "language": "chinese"
+  },
+  "term_extraction": {
+    "similarity_threshold": 0.8,
+    "max_definition_length": 500,
+    "min_definition_length": 10,
+    "confidence_threshold": 0.7
+  },
+  "association_analysis": {
+    "relationship_types": ["主从关系", "因果关系"],
+    "min_confidence": 0.7,
+    "context_window_size": 3
+  },
+  "validation": {
+    "strict_mode": true,
+    "check_format": true,
+    "generate_report": true
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "ocean_terminology.log",
+    "max_size_mb": 10
+  }
+}
