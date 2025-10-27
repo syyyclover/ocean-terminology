@@ -91,6 +91,9 @@ python app.py data/task.json --output results
 # 构建镜像
 docker build -t ocean-terminology .
 
+# 创建输出目录
+mkdir ./output
+
 # 运行容器
 docker run -v ./data:/app/data -v ./output:/app/output ocean-terminology data/task.json
 ```
