@@ -34,4 +34,4 @@ RUN chmod +x /entrypoint.sh
 # EXPOSE 5000
 
 # 设置默认命令
-CMD ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
