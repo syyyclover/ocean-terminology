@@ -27,11 +27,11 @@ COPY . .
 RUN mkdir -p data/raw data/processed output
 
 # 设置入口点
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
 
 # 暴露端口（如果需要Web服务）
 # EXPOSE 5000
 
 # 设置默认命令
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]
